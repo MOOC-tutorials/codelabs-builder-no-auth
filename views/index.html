@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codelabs builder</title>
+    <meta name="description" content="Get Google Doc as a Codelab">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Source+Code+Pro:400" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="container">
+      <h1>
+        Get your doc as a Codelab
+      </h1>
+    </header>
+
+    <main class="container">
+      <p>Paste your google doc key below and preview it!:</p>
+      <form>
+        <input class="pastekeyhere" name="key" type="text" autocorrect="off" maxlength="100" placeholder="Paste your doc key">
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+      <p>
+        You can also use this URL to get your data: <br><code>https://codelabs-builder.glitch.me/?key=YOURDOCKEY</code>
+      </p>
+      <hr>
+      <h2>
+        How to get your doc key
+      </h2>
+      <p>
+        In Google Docs (Docs) create a new doc. Look over the URL and the key you need is there!
+      </p>
+      <h3>
+        Example
+      </h3>
+      <p>
+        In this doc url: <br><code>https://docs.google.com/document/d/<b>1E6XMcdTexh5O8JwGy42SY3Ehzi8gOfUGiqTiUX6N04o</b>/edit</code>, the 
+        doc key is: <code>1E6XMcdTexh5O8JwGy42SY3Ehzi8gOfUGiqTiUX6N04o</code>.      
+      </p>
+      <a href="/codelabs">Available Codelabs</a>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
