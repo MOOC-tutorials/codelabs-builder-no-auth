@@ -1,7 +1,8 @@
 {
-  "name": "google-passport-example",
+  "name": "codelabs-builder-no-auth",
   "version": "0.0.1",
-  "description": "an example app to compile codelabs without google auth (needs claat installed and only can compile codelabs if claat has already been granted access)",
+  "description": "An example app to compile codelabs without google auth (needs claat installed and only can compile codelabs if claat has already been granted access)",
+
   "main": "server.js",
   "scripts": {
     "start": "node ./server.js"
@@ -12,7 +13,8 @@
     "express": "^4.16.2",
     "serve-index": "^1.9.1",
     "@octokit/app": "^4.1.0",
-    "@octokit/rest": "^16.40.2"
+    "@octokit/rest": "^16.40.2",
+    "dotenv": "8.2.0"
   },
   "engines": {
     "node": "^10.0"
