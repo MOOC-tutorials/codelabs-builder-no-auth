@@ -4,7 +4,7 @@
   "description": "an example app to compile codelabs without google auth (needs claat installed and only can compile codelabs if claat has already been granted access)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
