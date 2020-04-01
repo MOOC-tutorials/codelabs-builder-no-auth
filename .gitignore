@@ -61,5 +61,5 @@ typings/
 .next
 
 # Don't store codelabs
-codelabs/
+codelabs/*
 !codelabs/robot.txt
