@@ -43,7 +43,7 @@ module.exports = (app) => {
               }
           }
         } else{
-            // If there is no key load the success page
+            // If there is no key load the index page
             res.sendFile(__dirname + '/views/index.html');
         }
       }
