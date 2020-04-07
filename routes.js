@@ -27,7 +27,8 @@ module.exports = (app) => {
               if (matches) {
                 const key = matches[1];
                 getGoogleDriveDocWithoutCode(key, async (output) => {
-                  const baseDir = output.split('\t').pop();
+                  let baseDir = output.split('\t').pop();
+                  baseDir = baseDir.replace(/[\n\r]/g, '');
                   try{
                     await commitBuild(baseDir);
                     console.log('/codelabs/' + baseDir + '/index.html');
@@ -41,9 +42,11 @@ module.exports = (app) => {
               } else {
                 res.sendFile(__dirname + '/views/error.html');
               }
+          } else {
+            res.redirect('/index');
           }
         } else{
-            // If there is no key load the success page
+            // If there is no key load the index page
             res.sendFile(__dirname + '/views/index.html');
         }
       }
