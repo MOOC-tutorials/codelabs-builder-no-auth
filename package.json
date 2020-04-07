@@ -1,6 +1,6 @@
 {
   "name": "codelabs-builder-no-auth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An example app to compile codelabs without google auth (needs claat installed and only can compile codelabs if claat has already been granted access)",
   "main": "server.js",
   "scripts": {
@@ -21,8 +21,6 @@
   "keywords": [
     "node",
     "express",
-    "google",
-    "oauth",
-    "passport"
+    "google"
   ]
 }

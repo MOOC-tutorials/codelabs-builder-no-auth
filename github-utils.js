@@ -84,14 +84,14 @@ exports.commitBuild = async (baseDir) => {
   
   // index
   const indexPath = BASE_PATH + baseDir + '/index.html';
-  const indexFile = new Buffer(readFileSync(__dirname+ '/' + indexPath)).toString('base64');
-  const indexCommit = await commitFile(indexPath, indexFile, baseDir);
+  const indexFile = Buffer.from(readFileSync(__dirname+ '/' + indexPath)).toString('base64');
+  await commitFile(indexPath, indexFile, baseDir);
   console.log(indexPath);
 
   // codelabs.json
   const codelabsJsonPath = BASE_PATH + baseDir + '/codelab.json';
-  const codelabsJsonFile = new Buffer(readFileSync(__dirname+ '/' + codelabsJsonPath)).toString('base64');;
-  const codelabsJsonCommit = await commitFile(codelabsJsonPath, codelabsJsonFile, baseDir);
+  const codelabsJsonFile = Buffer.from(readFileSync(__dirname+ '/' + codelabsJsonPath)).toString('base64');;
+  await commitFile(codelabsJsonPath, codelabsJsonFile, baseDir);
   console.log(codelabsJsonPath);
 
   // img
@@ -100,8 +100,8 @@ exports.commitBuild = async (baseDir) => {
   for (let i = 0; i < images.length; i++) {
     const image = images[i];
     const imgPath = BASE_PATH + baseDir + '/img/' + image;
-    const imgFile = new Buffer(readFileSync(baseImgPath + image)).toString('base64');
-    const imgCommit = await commitFile(imgPath, imgFile, baseDir);
+    const imgFile = Buffer.from(readFileSync(baseImgPath + image)).toString('base64');
+    await commitFile(imgPath, imgFile, baseDir);
     console.log(imgPath);
   }
   
@@ -114,8 +114,8 @@ exports.commitBuild = async (baseDir) => {
     base: BASE
   }).catch((err) => {
     console.log(err.errors);
-    //Already a PR existis or no changes are detected between the branches (master vs staging)
-    return {data: {}};
+    //Already a PR exists or no changes are detected between the branches (master vs staging)
+    return {data: {url: ''}};
   });
   console.log(pullRequest.data.url);
 };

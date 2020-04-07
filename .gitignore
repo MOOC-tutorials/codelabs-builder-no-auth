@@ -63,3 +63,6 @@ typings/
 # Don't store codelabs
 codelabs/*
 !codelabs/robot.txt
+
+# config data
+.data/

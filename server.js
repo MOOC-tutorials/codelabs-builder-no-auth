@@ -1,5 +1,7 @@
 // server.js
 // where your node app starts
+// config dotenv usage
+require('dotenv').config();
 
 // init project
 const express = require('express');
