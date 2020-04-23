@@ -30,7 +30,7 @@ module.exports = (app) => {
                   let baseDir = output.split('\t').pop();
                   baseDir = baseDir.replace(/[\n\r]/g, '');
                   try{
-                    await commitBuild(baseDir);
+                    commitBuild(baseDir);
                     console.log('/codelabs/' + baseDir + '/index.html');
                     res.redirect('/codelabs/' + baseDir + '/index.html');
                     //res.sendFile(__dirname + '/views/success.html');
